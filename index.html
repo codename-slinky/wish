@@ -4,7 +4,7 @@
   </title>
   <head>
     <script>
-      var addr1="bot1.jpg", addr2="bot2.jpg", tmp;
+      var addr1="bot1.jpg", addr2="bot2.jpg", tmp, greet1="Hi I'm Kitana. Jatin built me!", greet2="Hi I'm Slinky. I look sick but I'm OK!";
       function func1()
       {
         document.getElementById("top").innerHTML = "You are Awesome!";
@@ -19,16 +19,20 @@
       }
       function func4()
       {
-        document.getElementById("image").src = addr2;   
+        document.getElementById("image").src = addr2;  
+        document.getElementById("top").innerHTML = greet2;
         tmp = addr2;
         addr2 = addr1;
         addr1 = tmp;
+        tmp = greet2;
+        greet2 = greet1;
+        greet1 = tmp;
       }
     </script>
   </head>
   
   <body>
-    <h1 id="top">ROBOT... MODE... INTITIATE...</h1>
+    <h1 id="top">Hi I'm Kitana. Jatin built me!</h1>
     <img id="image" src="bot1.jpg" ><br>
     <p>Click the buttons for different messages!</p>
     <button type="button" onclick="func1()">Option 1</button>
