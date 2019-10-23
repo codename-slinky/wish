@@ -31,11 +31,11 @@
       {
         document.getElementById("image").src = addr2.val;  
         document.getElementById("top").innerHTML = greet2.val;
-        swap(addr1, addr2);
-        swap(greet1, greet2);
-        swap(op11, op12);
-        swap(op21, op22);
-        swap(op31, op32);
+        [addr1, addr2] = [addr2, addr1];
+        [greet1, greet2] = [greet2, greet1];
+        [op11, op12] = [op12, op11];
+        [op21, op22] = [op22, op21];
+        [op31, op32] = [op32, op31];
       }
     </script>
   </head>
