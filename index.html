@@ -4,28 +4,38 @@
   </title>
   <head>
     <script>
-    function func1()
-    {
-      document.getElementById("top").innerHTML = "You are Awesome!";
-    }
-    function func2()
-    {
-      document.getElementById("top").innerHTML = "I love you!";
-    }
-    function func3()
-    {
-      document.getElementById("top").innerHTML = "You are beautiful!";
-    }
+      var addr1="bot1.jpg", addr2="bot2.jpg", tmp;
+      function func1()
+      {
+        document.getElementById("top").innerHTML = "You are Awesome!";
+      }
+      function func2()
+      {
+        document.getElementById("top").innerHTML = "I love you!";
+      }
+      function func3()
+      {
+        document.getElementById("top").innerHTML = "You are beautiful!";
+      }
+      function func4()
+      {
+        document.getElementById("image").src = "addr2";   
+        tmp = addr2;
+        addr2 = addr1;
+        addr1 = tmp;
+      }
     </script>
   </head>
   
   <body>
     <h1 id="top">ROBOT... MODE... INTITIATE...</h1>
-    <img src="bot.jpg" ><br>
+    <img id="image" src="bot1.jpg" ><br>
     <p>Click the buttons for different messages!</p><br>
     <button type="button" onclick="func1()">Option 1</button>
     <button type="button" onclick="func2()">Option 2</button>
     <button type="button" onclick="func3()">Option 3</button>
+    <br>
+    <button type="button" onclick="func4()">Change Bot</button>
   </body>
   
   <style>
