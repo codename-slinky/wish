@@ -19,7 +19,7 @@
       }
       function func4()
       {
-        document.getElementById("image").src = "addr2";   
+        document.getElementById("image").src = addr2;   
         tmp = addr2;
         addr2 = addr1;
         addr1 = tmp;
@@ -30,11 +30,11 @@
   <body>
     <h1 id="top">ROBOT... MODE... INTITIATE...</h1>
     <img id="image" src="bot1.jpg" ><br>
-    <p>Click the buttons for different messages!</p><br>
+    <p>Click the buttons for different messages!</p>
     <button type="button" onclick="func1()">Option 1</button>
     <button type="button" onclick="func2()">Option 2</button>
     <button type="button" onclick="func3()">Option 3</button>
-    <br>
+    <br><br>
     <button type="button" onclick="func4()">Change Bot</button>
   </body>
   
