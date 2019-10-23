@@ -9,12 +9,7 @@
       op11 = {val:"You are Awesome!"}; op12 = {val:"You are Fantastic!"};
       op21 = {val:"Hope you have an amazing Day!"}; op22 = {val:"Hope you have a day full of Fun!"};
       op31 = {val:"You are beautiful!"}; op32 = {val:"You are Gorgeous!"};
-      function swap(a, b)
-      {
-        var tmp = b;
-        b.val = a.val;
-        a.val = tmp.val;
-      }
+      var col1="DodgerBlue", col2="lime";
       function func1()
       {
         document.getElementById("top").innerHTML = op11.val;
@@ -31,11 +26,14 @@
       {
         document.getElementById("image").src = addr2.val;  
         document.getElementById("top").innerHTML = greet2.val;
+        doucment.body.style.background = col2;
+        [col1, col2] = [col2, col1];
         [addr1, addr2] = [addr2, addr1];
         [greet1, greet2] = [greet2, greet1];
         [op11, op12] = [op12, op11];
         [op21, op22] = [op22, op21];
         [op31, op32] = [op32, op31];
+        document.getElementById("instruct").innerHTML = "I have different messages!";
       }
     </script>
   </head>
@@ -43,7 +41,7 @@
   <body>
     <h1 id="top">Hi I'm Kitana. Jatin built me!</h1>
     <img id="image" src="bot1.jpg" ><br>
-    <p>Click the buttons for different messages!</p>
+    <p id="instruct">Click the buttons for different messages!</p>
     <button type="button" onclick="func1()">Option 1</button>
     <button type="button" onclick="func2()">Option 2</button>
     <button type="button" onclick="func3()">Option 3</button>
