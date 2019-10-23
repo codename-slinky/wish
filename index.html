@@ -4,29 +4,38 @@
   </title>
   <head>
     <script>
-      var addr1="bot1.jpg", addr2="bot2.jpg", tmp, greet1="Hi I'm Kitana. Jatin built me!", greet2="Hi I'm Slinky. I look sick but I'm OK!";
+      var addr1={val:"bot1.jpg"}, addr2={val:"bot2.jpg"}, tmp, greet1={val:"Hi I'm Kitana. Jatin built me!"}, greet2={val:"Hi I'm Slinky. I look sick but I'm OK!"};
+      var op11, op12, op21, op22, op31, op32;
+      op11 = {val:"You are Awesome!"}; op12 = {val:"You are Fantastic!"};
+      op21 = {val:"Hope you have an amazing Day!"}; op22 = {val:"Hope you have a day full of Fun!"};
+      op31 = {val:"You are beautiful!"}; op32 = {val:"You are Gorgeous!"};
+      function swap(a, b)
+      {
+        var tmp = b;
+        b.val = a.val;
+        a.val = tmp.val;
+      }
       function func1()
       {
-        document.getElementById("top").innerHTML = "You are Awesome!";
+        document.getElementById("top").innerHTML = op11.val;
       }
       function func2()
       {
-        document.getElementById("top").innerHTML = "I love you!";
+        document.getElementById("top").innerHTML = op21.val;
       }
       function func3()
       {
-        document.getElementById("top").innerHTML = "You are beautiful!";
+        document.getElementById("top").innerHTML = op31.val;
       }
       function func4()
       {
         document.getElementById("image").src = addr2;  
         document.getElementById("top").innerHTML = greet2;
-        tmp = addr2;
-        addr2 = addr1;
-        addr1 = tmp;
-        tmp = greet2;
-        greet2 = greet1;
-        greet1 = tmp;
+        swap(addr1, addr2);
+        swap(greet1, greet2);
+        swap(op11, op12);
+        swap(op21, op22);
+        swap(op31, op32);
       }
     </script>
   </head>
