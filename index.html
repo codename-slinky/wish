@@ -2,15 +2,24 @@
   <title>
     First website
   </title>
+  <head>
+    <script>
+    function func()
+    {
+      document.getElementById("top").innerHTML = "You are Awesome!";
+    }
+    </script>
+  </head>
   
   <body>
-    <h1>First page huh..</h1>
+    <h1 id="top">First page huh..</h1>
     <img src="bot.jpg" >
+    <button type="button" onclick="func()">Option 1</button> 
   </body>
   
   <style>
     body {
-      background-color:green;
+      background-color:blue;
       color:#fff;
       text-align:center;
     }
