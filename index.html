@@ -4,35 +4,35 @@
   </title>
   <head>
     <script>
-      var addr1={val:"bot1.jpg"}, addr2={val:"bot2.jpg"}, tmp, greet1={val:"Hi I'm Kitana. Jatin built me!"}, greet2={val:"Hi I'm Slinky. I look sick but I'm OK!"};
+      var addr1="bot1.jpg", addr2="bot2.jpg", tmp, greet1="Hi I'm Kitana. Jatin built me!", greet2="Hi I'm Slinky. I look sick but I'm OK!";
       var op11, op12, op21, op22, op31, op32;
-      op11 = {val:"You are Awesome!"}; op12 = {val:"You are Fantastic!"};
-      op21 = {val:"Hope you have an amazing Day!"}; op22 = {val:"Hope you have a day full of Fun!"};
-      op31 = {val:"You are beautiful!"}; op32 = {val:"You are Gorgeous!"};
+      op11 = "You are Awesome!"; op12 = "You are Fantastic!";
+      op21 = "Hope you have an amazing Day!"; op22 = "Hope you have a day full of Fun!";
+      op31 = "You are beautiful!"; op32 = "You are Gorgeous!";
       var col1="Plum", col2="PaleGreen";
       function func1()
       {
-        document.getElementById("top").innerHTML = op11.val;
+        document.getElementById("top").innerHTML = op11;
       }
       function func2()
       {
-        document.getElementById("top").innerHTML = op21.val;
+        document.getElementById("top").innerHTML = op21;
       }
       function func3()
       {
-        document.getElementById("top").innerHTML = op31.val;
+        document.getElementById("top").innerHTML = op31;
       }
       function func4()
       {
-        document.getElementById("image").src = addr2.val;  
-        document.getElementById("top").innerHTML = greet2.val;
+        document.getElementById("image").src = addr2;  
+        document.getElementById("top").innerHTML = greet2;
         document.body.style.backgroundColor = col2;
-        [col1, col2] = [col2, col1];
-        [addr1, addr2] = [addr2, addr1];
-        [greet1, greet2] = [greet2, greet1];
-        [op11, op12] = [op12, op11];
-        [op21, op22] = [op22, op21];
-        [op31, op32] = [op32, op31];
+        tmp = col2; col2 = col1; col1 = tmp;
+        tmp = addr2; addr2 = addr1; addr1 = tmp;
+        tmp = greet2; greet2 = greet1; greet1 = tmp;
+        tmp = op12; op12 = op11; op11 = tmp;
+        tmp = op22; op22 = op21; op21 = tmp;
+        tmp = op32; op32 = op31; op31 = tmp;
         document.getElementById("instruct").innerHTML = "I have different messages!";
       }
     </script>
